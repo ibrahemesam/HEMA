@@ -3,7 +3,6 @@
   <head>
   </head>
   <body>
-    <p>test</p>
     <script>
       alert('hhhh');
     </script>
