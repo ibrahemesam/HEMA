@@ -3,11 +3,11 @@
   <head>
   </head>
   <body>
-    <button id='btn'>Test</button>
+    <button id='btn' onclick='test()'>Test</button>
     <script>
       i=1;
-      document.getElementById('btn').click=function(){
-        document.getElementById('btn').top=i;
+      function(){
+        document.getElementById('btn').setAttribute('style',`position:relative;top:${i}px;`);
         i+=5;
       };
     </script>
