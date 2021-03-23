@@ -9,6 +9,7 @@
     <p id='p'>[geting your ip...]</p>
     <script>
       $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+        // or: https://api.ipify.org/?format=json
           $("#p")[0].innerHTML = data.match("ip=(.*)\n")[1];
       })
     </script>
