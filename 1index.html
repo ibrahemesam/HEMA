@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="jquery.min.js"></script>
   </head>
   <body>
-    <button id='btn' onclick='test()'>Test</button>
+    <h id='h'>Your Public IP v4 is:</h>
+    <br>
+    <p id='p'></p>
     <script>
-      i=1;
-      function test(){
-        document.getElementById('btn').setAttribute('style',`position:relative;top:${i}px;`);
-        i+=5;
-      };
+      $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+          $("#p")[0].innerHTML = data.match("ip=(.*)\n")[1];
+      })
     </script>
   </body>
 </html>
