@@ -6,7 +6,7 @@
   <body>
     <h id='h'>Your Public IP v4 is:</h>
     <br>
-    <p id='p'></p>
+    <p id='p'>[geting your ip...]</p>
     <script>
       $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
           $("#p")[0].innerHTML = data.match("ip=(.*)\n")[1];
